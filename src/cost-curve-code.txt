@@ -1,0 +1,13 @@
+    yk = (y_train == 0).astype(int)
+    theta0 = np.zeros(X_train_norm.shape[1] + 1)
+    theta_k, J_hist = gradient_descent(X_train_norm, yk, theta0, alpha, num_iters, lambda_)
+
+    os.makedirs("results", exist_ok=True)
+    plt.figure(figsize=(6,4))
+    plt.plot(J_hist)
+    plt.xlabel("Iteration")
+    plt.ylabel("Cost J(θ)")
+    plt.title("Cost curve (class 0 vs rest)")
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig("results/cost_curve.png", dpi=120)
