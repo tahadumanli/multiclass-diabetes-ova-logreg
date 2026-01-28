@@ -57,9 +57,6 @@ Special attention is given to **class imbalance**, particularly reduced recall f
 
 ---
 
-
----
-
 ## Tools & Technologies
 
 - **Python**
